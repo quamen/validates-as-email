@@ -1,0 +1,16 @@
+ValidatesAsEmail
+================
+
+Active Record extension for validating email addresses using TMail and MX records.
+
+Example
+=======
+
+class User < ActiveRecord::Base
+  
+  validates_as_email :email_address
+  
+end
+
+
+Copyright (c) 2008 Gareth Townsend, released under the MIT license
