@@ -11,6 +11,14 @@ class ValidatesAsEmail
       self.address = email
     end
 
+    def long_enough?
+      begin
+        return true if address.length > 5 # r@a.wk
+      rescue
+        return false
+      end
+    end
+    
     def valid?
       begin
         @domain_name = TMail::Address.parse(address).domain
